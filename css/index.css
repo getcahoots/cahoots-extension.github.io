@@ -169,6 +169,12 @@ iframe {
     width: 100%;
     margin: 174px auto 0;
 }
+
+#video {
+    text-align: center; 
+    height: 384px;
+}
+
 .text {
     float: left;
     width: 100%;
@@ -350,6 +356,9 @@ nav a {
     ._container ._text-2, ._container ._text-3, ._container ._text-4 {
         margin-left: 4.99874%;
     }
+    #video {
+        max-width: 640px; 
+    }
 }
 @media(max-width: 480px) {
     body {
@@ -487,6 +496,10 @@ nav a {
         animation: none;
     }
     .claim {
+    }
+    #video {
+        max-width: 100%; 
+        max-height: 200px; 
     }
 }
 
