@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>index</title>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,900,700,400" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/index-grid.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="body index clearfix">
+  <header class="_container _container-1 clearfix">
+    <a href="index.html"><div class="logo"></div></a>
+    <button class="_button _button-1">Download</button>
+    <nav class="_container _container-2 clearfix">
+      <ul class="_container _container-3 clearfix">
+        <a href="index.html"><li class="_text-1">Über Cahoots</li></a>
+        <a href="instructions.html"><li id="active-nav" class="_text-2">Anleitung</li></a>
+        <a href="contribute.html"><li class="_text-3">Beitragen</li></a>
+        <a href="support.html"><li class="_text-4">Unterstützen</li></a>
+      </ul>
+    </nav>
+  </header>
+  <section class="intro clearfix">
+    <div class="fit clearfix" style="margin-bottom: 50px;">
+      <div class="one clearfix"></div>
+      <div id="active" class="claim"><strong>Wähle</strong> einen Browser.</div>
+    </div>
+    <div class="fit clearfix" style="margin-bottom: 50px;">
+      <div class="two clearfix"></div>
+      <div id="active" class="claim-2"><strong>Installiere</strong> die Cahoots Extension.</div>
+    </div>
+    <div class="fit clearfix" style="margin-bottom: 50px;">
+      <div class="three clearfix"></div>
+      <div id="active" class="claim-3"><strong>Überprüfe</strong> die Autoren (Hover).</div>
+    </div>
+    <div class="fit clearfix">
+      <div class="four clearfix"></div>
+      <div id="active" class="claim-4"><strong>Trage</strong> Informationen bei.</div>
+    </div>
+  </section>
+ 
+  <script src="js/jquery-min.js"></script>
+  <script>
+    var new_url = 'images/chrome-colored.svg';
+    $('.chrome').attr('data', new_url);
+    $('.chrome').load(new_url);
+  </script>
+</body>
+</html>
