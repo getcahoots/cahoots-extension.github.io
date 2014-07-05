@@ -210,7 +210,7 @@ iframe {
     z-index: 6;
     width: 140px;
     height: 75px;
-    background: rgb(255,255,255) url('../images/logo.svg') center center no-repeat;
+    background: url('../images/logo.svg') center center no-repeat;
 }
 .container-2 {
     width: 960px;
