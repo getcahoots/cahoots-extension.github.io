@@ -1,0 +1,152 @@
+// HEADER //
+
+header {
+	background: $prime;
+	width: 100%;
+	height: 80px;
+}
+.fit {
+	width: 960px;
+	margin: 0 auto;
+	height: 80px;
+}
+header .fit {
+	display: flex;
+    align-items: center;
+}
+.logo {
+	background: url('../images/logo.png') center center no-repeat;
+	background-size: 115px 44px;
+	width: 115px;
+	height: 44px;
+	margin: 0;
+}
+header nav {
+	position: relative;
+	right: 0;
+	width: 844px;
+	height: auto;
+	text-transform: uppercase;
+}
+header nav ul {
+	float: right;
+	& li {
+		list-style: none;
+		display: inline;
+		margin: 0 0 0 20px;
+		padding: 8px 12px;
+		border-radius: 3px;
+	}
+}
+
+// TEASER
+
+.teaser {
+	clear: both;
+	width: 100%;
+	height: 500px;
+	background-image: url('../images/DSCF0014-k.jpg');
+	background-size: cover;
+	background-position: 50% 82%;
+}
+.teaser .fit {
+	padding: 80px 0 0 0;
+}
+.teaser .fit p{
+	width: 340px;
+}
+
+// CONTENT
+
+.content {
+	margin-top: 40px;
+	display: flex;
+}
+.article {
+	width: 469px;
+	margin: 0 20px 0 0;
+}
+
+
+
+@include responsive($big-break) {
+	header {
+		height: 280px;
+	}
+	.fit {
+		width: 92%;
+		margin: 0 auto;
+		height: auto;
+	}
+	.teaser {
+		width: 100% !important;
+	}
+	header .fit {
+		display: inline-block;
+	    width: 100%;
+	}
+	.logo {
+		background: url('../images/logo.png') center center no-repeat;
+		background-size: 115px 44px;
+		width: 115px;
+		height: 44px;
+		margin: 40px auto 20px;
+	}
+	header nav {
+		position: relative;
+		height: auto;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	header nav ul {
+		float: none;
+		width: 200px;
+		text-align: center;
+		margin: 20px auto;
+		padding: 0;
+		& li {
+			list-style: none;
+			display: block;
+			margin: 10px auto;
+			padding: 8px 12px;
+			border-radius: 3px;
+		}
+	}
+	// TEASER
+
+	.teaser {
+		clear: both;
+		width: 100%;
+		height: 390px;
+		background-image: url('../images/DSCF0014-k.jpg');
+		background-size: cover;
+		background-position: 50% 82%;
+	}
+	.teaser .fit {
+		padding: 20px 0 0 0;
+	}
+	.teaser .fit p{
+		width: 270px;
+	}
+	.article {
+		width: 469px;
+		margin: 40px 20px 0 0;
+	}
+}
+
+@include responsive($small-break) {
+	.article {
+		width: 100%;
+		margin: 40px 20px 0 0;
+	}
+	.content {
+		margin-top: 40px;
+		display: block;
+	}
+}
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }

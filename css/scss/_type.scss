@@ -1,0 +1,75 @@
+body {
+  font: 400 1.063em/1.5 Lato;
+  font-weight: 400;
+  font-style: normal;
+  font-size:17px;
+  line-height:1.6;
+  color: $sec;
+  text-rendering: optimizeLegibility;
+}
+
+blockquote {
+  font-style: italic;
+  font-weight: 400;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  padding-left: 25px;
+  font-size: 1.4em;
+  margin: 0 0 $padding/2;
+  border-left:2px solid $prime;
+}
+
+h1,h2,h3,h4{
+}
+
+h1 {
+  font-size: 1.8em;
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin: 0 0 25px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 26px;
+  margin: 0 0 25px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 18px;
+  margin: 0 0 25px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h5 {
+  font-size: 16px;
+  margin: 0 0 25px;
+  font-style: normal;
+  font-weight: normal;
+}
+
+p {
+  margin: 0 0 $padding/2;
+}
+
+pre{
+  font-family:Monaco, Menlo, Consolas, "Courier New", monospace;
+  margin:0 0 $padding/2;
+  padding:10px;
+  background:#f5f5f5;
+  border:1px solid rgba(0,0,0,.1);
+  @include border-radius(5px);
+  display:block;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+}

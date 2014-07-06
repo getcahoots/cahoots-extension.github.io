@@ -1,44 +1,60 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="initial-scale=1.0">
-  <title>index</title>
-  <link href="http://fonts.googleapis.com/css?family=Lato:400,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="css/standardize.css">
-  <link rel="stylesheet" href="css/index-grid.css">
-  <link rel="stylesheet" href="css/index.css">
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/main.css">
+	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 </head>
-<body class="body index clearfix">
-  <div class="fix clearfix">
-    <header class="_container-1 clearfix">
-      <img class="logo" src="images/logo.png">
-      <nav class="_container-2 clearfix">
-        <ul class="_container-3 clearfix">
-          <li class="_text _text-1">Über Cahoots</li>
-          <li class="_text _text-2">Anleitung</li>
-          <li class="_text _text-3">Beitragen</li>
+<body>
+    <header>
+      <div class="fit">
+        <div class="logo"></div>
+        <nav>
+        <ul>
+          <li id="active">
+            <a href="#about">Über Cahoots</a>
+          </li>
+          <li>
+            <a href="#how">Anleitung</a>
+          </li>
+          <li>
+            <a href="#commit">Beitragen</a>
+          </li>
         </ul>
       </nav>
+      </div>
     </header>
-  </div>
-  <section class="teaser teaser-1 clearfix">
-    <section class="teaser-content clearfix">
-      <h1 class="teaser teaser-2">Cahoots</h1>
-      <p class="teaser teaser-3">Cahoots ist eine Browser-Extension, welche die Medienkompetenz des Nutzers durch das Aufzeigen von Verbindungen zwischen Journalisten und Organisationen, Vereinen als auch Unternehmen erweitern soll.</p>
-      <button class="_button _button-1">Für Firefox</button>
-      <button class="_button _button-2">Für Chrome</button>
+    <section class="fit teaser">
+      <div class="fit">
+        <h1>Cahoots</h1>
+        <p>Cahoots ist eine Browser-Extension, welche die Medienkompetenz des Nutzers durch das Aufzeigen von Verbindungen zwischen Journalisten und Organisationen, Vereinen als auch Unternehmen erweitern soll.</p>
+        <button class="button ff">Für Firefox</button>
+        <button class="button chrome">Für Chrome</button>
+      </div>
     </section>
-  </section>
-  <section class="content clearfix">
-  <ul class="teaser-fix">
-    <li class="teaser teaser-5"><h2>Was ist Cahoots?</h2></li>
-    <li class="teaser teaser-6">Cahoots ist eine Browserextension, welche die Medienkompetenz des Nutzers durch das Aufzeigen von Verstrickungen zwichen Lobbyismus und Journalismus erweitern soll. Die Extension soll es den Nutzern erlauben, einfach und schnell festzustellen ob Aussagen von Journalisten möglicherweise interessengeleitet sind.</li>
-  </ul>
-    <ul class="teaser-fix">
-    <li class="teaser teaser-4"><h2>Wie funktioniert Cahoots?</h2></li>
-    <li class="teaser teaser-7">Nachdem der Installation und Aufruf eine Nachrichtenseite, die in der Cahoots Datanbank gespeichert ist, wird der Nutzer alarmiert und alle mit der Publikation bekannte Verbindungen zu Lobbyorganistaionen angezeit. Weiterhin können hier weitere Informationen zur Datenbank hinzugefügt werden.</li>
-    </ul>
-  </section>
+    <section class="fit content">
+      <article class="article one">
+        <h2>Was ist Cahoots?</h2>
+        <p>Cahoots ist eine Browserextension, welche die Medienkompetenz des Nutzers durch das Aufzeigen von Verstrickungen zwichen Lobbyismus und Journalismus erweitern soll. Die Extension soll es den Nutzern erlauben, einfach und schnell festzustellen ob Aussagen von Journalisten möglicherweise interessengeleitet sind.</p>
+      </article>
+      <article class="article two">
+        <h2>Wie funktioniert Cahoots?</h2>
+        <p>Nachdem der Installation und Aufruf eine Nachrichtenseite, die in der Cahoots Datanbank gespeichert ist, wird der Nutzer alarmiert und alle mit der Publikation bekannte Verbindungen zu Lobbyorganistaionen angezeit. Weiterhin können hier weitere Informationen zur Datenbank hinzugefügt werden.</p>
+      </article>
+    </section>
+	
+	<!-- Content goes here -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+	
 </body>
 </html>
