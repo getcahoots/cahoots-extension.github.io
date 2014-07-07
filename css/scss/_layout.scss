@@ -20,11 +20,6 @@ header .shrink {
 	margin: 0 auto;
 	height: 80px;
 }
-.fit shrink {
-	width: 960px;
-	margin: 0 auto;
-	height: 40px;
-}
 header .fit {
 	display: flex;
     align-items: center;
@@ -62,34 +57,55 @@ header nav ul {
 .teaser {
 	clear: both;
 	width: 100%;
-	height: 520px;
+	height: 570px;
 	background-image: url('../images/DSCF0014-k.jpg');
 	background-size: cover;
-	background-position: 50% 70%;
+	background-position: 70% 56%;
 }
 .teaser .fit {
-	padding: 156px 0 0 0;
+	padding: 135px 0 0 0;
 }
 .teaser .fit p{
-	width: 340px;
+	width: 310px;
 }
 
 // CONTENT
 
 .content {
-	margin-top: 40px;
+	margin-top: 60px;
 	display: flex;
+	height: auto !important;
+	&.video {
+		display: block;
+	}
 }
 .article {
 	width: 469px;
+	height: auto;
 	margin: 0 20px 0 0;
 }
 
+// VIDEO
+
+video {
+  width: 100% !important;
+  height: 539px; 
+  // border: 1px solid $prime-dark;
+  // box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  margin: 10px 0;
+}
+
+#colorize {
+	padding: 10px 0 40px 0;
+	margin: 50px 0;
+	background: $prime;
+}
 
 
 @include responsive($big-break) {
 	header {
 		height: 280px;
+		position: static;
 	}
 	.fit {
 		width: 92%;
@@ -150,6 +166,16 @@ header nav ul {
 		width: 469px;
 		margin: 40px 20px 0 0;
 	}
+
+	// VIDEO
+
+	video {
+	  width: 100% !important;
+	  height: auto !important;
+	  // border: 1px solid $prime-dark;
+	  // box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+	  margin: 10px 0;
+	}
 }
 
 @include responsive($small-break) {
@@ -160,6 +186,16 @@ header nav ul {
 	.content {
 		margin-top: 40px;
 		display: block;
+	}
+	.teaser {
+		clear: both;
+		width: 100%;
+		height: 470px;
+		background-size: cover;
+		background-position: 22% 52%;
+	}
+	.teaser .fit p{
+		width: 240px;
 	}
 }
 
