@@ -72,7 +72,7 @@ header nav ul {
 // CONTENT
 
 .content {
-	margin-top: 60px;
+	padding-top: 60px;
 	display: flex;
 	height: auto !important;
 	&.video {
@@ -179,13 +179,16 @@ video {
 }
 
 @include responsive($small-break) {
+	.video h2 {
+		margin: 0;
+	}
 	.article {
 		width: 100%;
 		margin: 40px 20px 0 0;
 	}
 	.content {
-		margin-top: 40px;
 		display: block;
+		padding: 0px 0;
 	}
 	.teaser {
 		clear: both;
@@ -196,6 +199,11 @@ video {
 	}
 	.teaser .fit p{
 		width: 240px;
+	}
+	#colorize {
+		padding: 30px 0 20px 0;
+		margin: 50px 0;
+		background: $prime;
 	}
 }
 
