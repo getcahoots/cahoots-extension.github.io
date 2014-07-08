@@ -63,6 +63,7 @@ header nav {
 	background-image: url('../images/DSCF0014-k.jpg');
 	background-size: cover;
 	background-position: 70% 56%;
+	padding-top: 20px;
 }
 .teaser .fit {
 	padding: 135px 0 0 0;
@@ -119,9 +120,22 @@ footer {
 	display: flex;
     align-items: center;
     & ul{
+    	display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
 		& li {
 			list-style: none;
 			display: inline;
+			margin: 0px 25px 0 0;
+			font-size: 1.4em;
+			font-weight: 300;
+			&:nth-child(2) {
+				margin: 10px 25px 0 0;
+			}
+			&:last-child {
+				margin: 0;
+			}
 		}
 	}
 }
@@ -221,6 +235,7 @@ footer {
 		height: 470px;
 		background-size: cover;
 		background-position: 22% 52%;
+		padding-top: 0px;
 	}
 	.teaser .fit p{
 		width: 240px;
@@ -230,6 +245,24 @@ footer {
 		margin: 50px 0;
 		background: $prime;
 	}
+	header nav ul li a {
+		margin: 0;
+	}
+	footer {
+    & ul{
+		& li {
+			margin: 0px 15px 0 0;
+			font-size: 1.2em;
+			font-weight: 300;
+			&:nth-child(2) {
+				margin: 10px 15px 0 0;
+			}
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
 }
 
 // Mobile first styles if needed
