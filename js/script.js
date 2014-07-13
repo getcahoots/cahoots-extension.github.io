@@ -99,6 +99,7 @@ $(window).load(function(){
           format: "json"
         },
         function(data) {
+            console.log(data);
           $("#results").empty();
           $("#results").append("
 
