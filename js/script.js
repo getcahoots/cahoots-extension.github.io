@@ -122,7 +122,7 @@ $(window).load(function(){
         $.getJSON("json/db.json", function(data) {
             console.log(data);
           $("#results").empty();
-          $.each(data.query.search, function(i,item){
+          $.each(data.search, function(i,item){
             $("#results").append(item.name);
           });
         });
