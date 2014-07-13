@@ -4,88 +4,85 @@
 <!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-	<title></title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="css/main.css">
-	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/main.css">
+  <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+</head>
+<body>
+  <header>
+    <div class="fit">
+      <div class="logo"></div>
+      <nav>
+        <div class="smintIt">
+          <ul>
+            <li id="active">
+              <a href="#how">Über Cahoots</a>
+            </li>
+            <li>
+              <a href="#content">Anleitung</a>
+            </li>
+            <li>
+              <a href="#commit">Beitragen</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <section class="fit teaser">
+    <div class="fit">
+      <h1>Was ist Cahoots?</h1>
+      <p>Cahoots ist eine Browser-Extension, welche die Medienkompetenz des Nutzers durch das Aufzeigen von Verbindungen zwischen Journalisten und Organisationen, Vereinen als auch Unternehmen erweitern soll.</p>
+      <button class="button ff">Für Firefox</button>
+      <button class="button chrome">Für Chrome</button>
+    </div>
+  </section>
+  <section class="fit content" id="how">
+    <article class="article one">
+      <h2>Wie kann ich Cahoots installieren?</h2>
+      <p>Die Browser-Extension ist zur Zeit für die Desktop-Browser Firefox und Chrome umgesetzt. Um Cahoots zu installieren, folge einfach den entsprechenden Download-Links. Nach der Installation kannst du einfach über markierte Autoren hovern und dir die vorliegenden Informationen anzeigen lassen.</p>
+    </article>
+    <article class="article two">
+      <h2>Wie kann ich Informationen beitragen?</h2>
+      <p>Hier kannst du das Projekt unterstützen, indem du Informationen zur Datenbank beiträgst. Nutze dafür einfach das bereitgestellte Formular. Die Informationen werden überprüft und erscheinen mit dem nächsten Update.</p>
+    </article>
+  </section>
+  <div id="colorize">
+    <section class="fit content video" id="content">
+      <h2>Cahoots im Einsatz</h2>
+      <video width="1280" height="720" controls>
+        <source src="video/cahoots-tutorial.webm" type="video/webm" />
+        <source src="video/cahoots-tutorial.mp4" type="video/mp4" />
+      </video>
+    </section>
+  </div>
+  <section class="fit content video" id="commit">
+    <h2>Cahoots soll wachsen.</h2><br>
+    <iframe src="http://artingei.de/cahoots/wordpress/?page_id=2" width="100%" height="640px" border="0" id="iframe">
+    </iframe>
+  </section>
+  <!-- <div id="colorize" style="margin:0;padding: 0px 0 30px 0;">
+    <footer class="fit content video">
+      <ul>
+        <li>
+          XX
+        </li>
+        <li>
+          <img src="images/hxm.svg">
+        </li>
+        <li>
+          XX
+        </li>
+      </ul>
+    </section>
+  </div> -->
+  
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
   <script>window.jQuery || document.write('<script src="js/jquery-min.js"><\/script>')</script>
   <script src="js/script.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-</head>
-<body>
-    <header>
-      <div class="fit">
-        <div class="logo"></div>
-        <nav>
-        <div class="smintIt">
-        <ul>
-          <li id="active">
-            <a href="#how">Über Cahoots</a>
-          </li>
-          <li>
-            <a href="#content">Anleitung</a>
-          </li>
-          <li>
-            <a href="#commit">Beitragen</a>
-          </li>
-        </ul>
-        </div>
-      </nav>
-      </div>
-    </header>
-    <section class="fit teaser">
-      <div class="fit">
-        <h1>Was ist Cahoots?</h1>
-        <p>Cahoots ist eine Browser-Extension, welche die Medienkompetenz des Nutzers durch das Aufzeigen von Verbindungen zwischen Journalisten und Organisationen, Vereinen als auch Unternehmen erweitern soll.</p>
-        <button class="button ff">Für Firefox</button>
-        <button class="button chrome">Für Chrome</button>
-      </div>
-    </section>
-    <section class="fit content" id="how">
-      <article class="article one">
-        <h2>Wie kann ich Cahoots installieren?</h2>
-        <p>Die Browser-Extension ist zur Zeit für die Desktop-Browser Firefox und Chrome umgesetzt. Um Cahoots zu installieren, folge einfach den entsprechenden Download-Links. Nach der Installation kannst du einfach über markierte Autoren hovern und dir die vorliegenden Informationen anzeigen lassen.</p>
-      </article>
-      <article class="article two">
-        <h2>Wie kann ich Informationen beitragen?</h2>
-        <p>Hier kannst du das Projekt unterstützen, indem du Informationen zur Datenbank beiträgst. Nutze dafür einfach das bereitgestellte Formular. Die Informationen werden überprüft und erscheinen mit dem nächsten Update.</p>
-      </article>
-      </section>
-      <div id="colorize">
-        <section class="fit content video" id="content">
-          <h2>Cahoots im Einsatz</h2>
-          <video width="1280" height="720" controls>
-            <source src="video/cahoots-tutorial.webm" type="video/webm" />
-            <source src="video/cahoots-tutorial.mp4" type="video/mp4" />
-          </video>
-        </section>
-      </div>
-      <section class="fit content video" id="commit">
-        <h2>Cahoots soll wachsen.</h2><br>
-        <iframe src="http://artingei.de/cahoots/wordpress/?page_id=2" width="100%" height="640px" border="0" id="iframe">
-        </iframe>
-      </section>
-      <div id="colorize" style="margin:0;padding: 0px 0 30px 0;">
-        <footer class="fit content video">
-          <ul>
-            <li>
-              We really
-            </li>
-            <li>
-              <img src="images/hxm.svg">
-            </li>
-            <li>
-              you soo much.
-            </li>
-          </ul>
-        </section>
-      </div>
-	
-	<!-- Content goes here -->
-
-  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-	
 </body>
 </html>
