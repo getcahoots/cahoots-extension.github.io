@@ -10,6 +10,11 @@
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/main.css">
   <!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+  <script language="javascript" type="text/javascript">
+    function resizeIframe(obj) {
+      obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -61,7 +66,7 @@
   </div>
   <section class="fit content video" id="contribute">
     <h2>Cahoots soll wachsen.</h2><br>
-    <iframe src="http://artingei.de/cahoots/wordpress/?page_id=2" width="100%" height="640px" border="0" id="iframe">
+    <iframe src="http://artingei.de/cahoots/wordpress/?page_id=2" width="100%" height="640px" border="0" id="iframe" onload='javascript:resizeIframe(this);'>
     </iframe>
   </section>
   <!-- <div id="colorize" style="margin:0;padding: 0px 0 30px 0;">
