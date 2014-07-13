@@ -7,6 +7,11 @@ a{
 	}
 }
 
+p a {
+  border-bottom: 1px solid $sec;
+  padding-bottom: 1px;
+}
+
 
 // Default button
 .btn{

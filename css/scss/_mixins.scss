@@ -22,14 +22,14 @@
 {
   @media screen and (max-width: $res)
   {
-    @content;
+    @content; 
   }
 }
 
 @mixin mobilefirst($res)
-{
+{ 
   @media screen and (min-width: $res)
-  {
+  { 
     @content;
   }
 }
