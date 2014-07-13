@@ -71,18 +71,18 @@ var aChildren = $("nav li").children(); // find the a children of the list items
             var theID = aArray[i];
             var divPos = $(theID).offset().top; // get the offset of the div from the top of page
             var divHeight = $(theID).height(); // get the height of the div in question
-            if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+            if (windowPos+20 >= divPos && windowPos <= (divPos + divHeight)) {
                 $("a[href='" + theID + "']").addClass("active");
             } else {
                 $("a[href='" + theID + "']").removeClass("active");
             }
         }
 
-        if(windowPos + windowHeight == docHeight) {
-            if (!$("nav li:last-child a").hasClass("nav-active")) {
-                var navActiveCurrent = $(".nav-active").attr("href");
-                $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
-                $("nav li:last-child a").addClass("nav-active");
+        if(windowPos+20 + windowHeight >= docHeight-200) {
+            if (!$("nav li:last-child a").hasClass("active")) {
+                var navActiveCurrent = $(".active").attr("href");
+                $("a[href='" + navActiveCurrent + "']").removeClass("active");
+                $("nav li:last-child a").addClass("active");
             }
         }
     });
