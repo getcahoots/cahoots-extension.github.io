@@ -29,6 +29,7 @@ header .fit .shrink {
 }
 .logo {
 	background: url('../images/logo.png') center center no-repeat;
+	background-attachment: fixed;
 	background-size: 115px 44px;
 	width: 115px;
 	height: 44px;
