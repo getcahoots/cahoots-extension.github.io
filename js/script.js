@@ -122,15 +122,8 @@ $(window).load(function(){
         $.getJSON("json/db.json", function(data) {
             console.log(data);
           $("#results").empty();
-          $("#results").append("
-
-Results for <b>" + q + "</b>
-
-");
           $.each(data.query.search, function(i,item){
-            $("#results").append("
-<div><a href='http://en.wikipedia.org/wiki/" + encodeURIComponent(item.title) + "'>" + item.title + "</a>" + item.snippet + "</div>
-");
+            $("#results").append(item.name);
           });
         });
       });    
