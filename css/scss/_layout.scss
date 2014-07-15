@@ -123,6 +123,10 @@ footer {
 	height: auto;
 	display: flex;
     align-items: center;
+    padding-top: 50px !important;
+    & .content {
+    	padding-top: 50px !important;
+    }
     & ul{
     	display: flex;
 		align-items: center;
@@ -254,10 +258,11 @@ footer {
 		margin: 0;
 	}
 	footer {
+    	padding-top: 50px !important;
     & ul{
 		& li {
 			margin: 0px 15px 0 0;
-			font-size: 1.2em;
+			font-size: 1.3em;
 			font-weight: 300;
 			&:nth-child(2) {
 				margin: 10px 15px 0 0;
