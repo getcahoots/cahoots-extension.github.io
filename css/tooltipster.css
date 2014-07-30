@@ -38,7 +38,7 @@
 
 /* This is the base styling required to make all Tooltipsters work */
 .tooltipster-base {
-	padding: 2px 0;
+	padding: 8px 6px;
 	font-size: 0;
 	line-height: 0;
 	position: absolute;
