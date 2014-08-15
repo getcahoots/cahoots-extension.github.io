@@ -276,6 +276,23 @@ footer {
 }
 }
 
+.search {
+	font-size: 1em;
+	font-weight: 300;
+	text-align: center;
+	height: 60px;
+	margin: 40px auto 30px auto;
+	& form {
+		display: inline-flex;
+		width: auto;
+		text-align: center;
+		margin: 0 auto;
+		@include responsive($small-break) {
+			width: 100%;
+		}
+	}
+}
+
 // Mobile first styles if needed
 // @include mobilefirst($big-break) {
 // }

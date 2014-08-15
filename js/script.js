@@ -87,3 +87,15 @@ var aChildren = $("nav li").children(); // find the a children of the list items
         }
     });
 });
+
+$(document).ready(function(){
+    $('#search').keyup(function() {
+        sessionStorage.setItem("searchValue", document.getElementById("search").value);
+    });
+    
+    $( "#click" ).click(function() {
+        window.open('../website/suchen/index.html');
+    });
+});
+
+

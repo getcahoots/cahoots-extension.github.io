@@ -686,19 +686,72 @@ form label {
   margin-bottom: 5px;
 }
 form input[type=text], form input[type=email], form input[type=phone], form input[type=password], form input[type=number], form input[type=search], form textarea {
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
   width: 100%;
   padding: 5px;
   border: 1px solid #ccc;
   outline: none;
 }
 form input[type=text]:focus, form input[type=email]:focus, form input[type=phone]:focus, form input[type=password]:focus, form input[type=number]:focus, form input[type=search]:focus, form textarea:focus {
-  border-color: #f2f2f4;
+  border-color: rgba(60, 60, 70, 0.6);
 }
 form input[type=text].auto, form input[type=email].auto, form input[type=phone].auto, form input[type=password].auto, form input[type=number].auto, form input[type=search].auto, form textarea.auto {
   width: auto;
+}
+form input[type=search], form textarea {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 0 20px;
+  border: 1px solid rgba(60, 60, 70, 0.3);
+  outline: none;
+  height: 54px;
+  width: 600px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+  -webkit-transition: 0s ease-in-out;
+  -moz-transition: 0s ease-in-out;
+  -o-transition: 0s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+@media screen and (max-width: 480px) {
+  form input[type=search], form textarea {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+  }
+}
+form .search-submit {
+  background: #414141 url("../images/search-icon.svg") center center no-repeat;
+  background-size: 100% 100%;
+  width: 56px;
+  height: 56px;
+  vertical-align: middle;
+  outline: 0;
+  border: 0;
+  position: relative;
+  margin-left: -56px;
+  -webkit-border-radius: 0 4px 4px 0;
+  -moz-border-radius: 0 4px 4px 0;
+  -ms-border-radius: 0 4px 4px 0;
+  -o-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0;
+}
+@media screen and (max-width: 480px) {
+  form .search-submit {
+    width: 50px;
+    height: 50px;
+    margin-left: -50px;
+  }
 }
 form .note {
   margin-top: 5px;
@@ -2814,7 +2867,7 @@ header nav ul li a {
 video {
   width: 100% !important;
   height: 539px;
-  box-shadow: 0 -7px 40px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -7px 40px rgba(0, 0, 0, 0);
   margin: 10px 0;
 }
 
@@ -3007,6 +3060,25 @@ footer ul li:last-child {
     margin: 0;
   }
 }
+.search {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  height: 60px;
+  margin: 40px auto 30px auto;
+}
+.search form {
+  display: inline-flex;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 480px) {
+  .search form {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   body {
     overflow-x: hidden;

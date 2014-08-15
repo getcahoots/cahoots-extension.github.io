@@ -1,0 +1,120 @@
+label{
+	display:block;
+	margin-bottom:5px;
+}
+input[type=text],input[type=email],input[type=phone],input[type=password],input[type=number],input[type=search], textarea{
+	@include box-shadow(inset 0 1px 2px rgba(0,0,0,.05));
+	@include border-radius($btn-br);
+	padding: 0 20px;
+	border:1px solid #ccc;
+	outline:none;
+	height: 56px;
+	width: 600px;
+	-webkit-appearance: none;  // remove shadow in iOS
+	@include box-shadow(0 0 8px rgba(0,0,0,0.075));
+	@include transition(0.4s ease-in-out);
+	@include responsive($big-break) {
+		width: 480px;
+	}
+	@include responsive($small-break) {
+		width: 100%; 
+		height: 50px;
+		padding: 0 12px;
+	}
+	&:focus{
+		border-color:$secondary-color;
+		@include box-shadow(inset 0 0 16px rgba(0,0,0,0.075));
+	}
+	&.full-width{
+		width:100%;
+	}
+}
+.search-submit {
+	background: #414141 url("../img/search-icon.svg") center center no-repeat;
+	background-size: 100% 100%;
+	width: 56px;
+	height: 56px;
+	vertical-align: middle;
+	outline: 0;
+	border: 0;
+	position: relative;
+	margin-left: -56px;
+	@include border-radius (0 4px 4px 0);
+	@include responsive($small-break) {
+		width: 50px;
+		height: 50px;
+		margin-left: -50px;
+	}
+}
+textarea{
+	height:$line-height*3;
+}
+
+form{
+	margin-bottom:$padding;
+
+	// Wrap each form input/element in a field div
+	.field{
+		margin-bottom:$padding/2;
+	}
+
+	// Notes go under the input fields
+	.note{
+		margin-top:5px;
+		color:$subtle-color;
+	}
+
+	// Required label
+	.req{
+		font-style: italic;
+	}
+
+	// Validation, add error class to the item div
+	.error{
+
+		// Validation reason
+		.reason{
+			margin-top:5px;
+			color:$bad-color;
+		}
+		input[type=text],input[type=email],input[type=phone],input[type=password],input[type=number],input[type=search], textarea{
+			border-color:$bad-color;
+		}
+	}
+}
+
+/* Place Holder CSS */
+::-webkit-input-placeholder {
+  color: $text-color;
+  opacity: 0.5;
+  @include transition(0.4s ease-in-out);
+}
+:-moz-placeholder {
+  color: $text-color;
+  opacity: 0.5;
+  @include transition(0.4s ease-in-out);
+}
+::-moz-placeholder {
+  color: $text-color;
+  opacity: 0.5;
+  @include transition(0.4s ease-in-out);
+}
+:-ms-input-placeholder {  
+  color: $text-color;
+  opacity: 0.5;
+  @include transition(0.4s ease-in-out);
+}
+
+/* Place Holder CSS for Focus */
+:focus::-webkit-input-placeholder {
+  @include transition(0.4s ease-in-out);
+}
+:focus:-moz-placeholder {
+  @include transition(0.4s ease-in-out);
+}
+:focus::-moz-placeholder {
+  @include transition(0.4s ease-in-out);
+}
+:focus:-ms-input-placeholder {  
+  @include transition(0.4s ease-in-out);
+}
