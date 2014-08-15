@@ -29,7 +29,7 @@
             var output = '';
             $.getJSON('db.json', function(data) {
               $.each(data, function(key, val){
-                if ((val.name.search(regex) != -1) && ($("#search").val > 2)) {
+                if ((val.name.search(regex) != -1)) {
                   	output += '<h1>Für <strong>' + val.name + '</strong> liegen folgende Verbindungen vor:</h1>';
                   	output += '<article class="cahoots_middle_site"><ul id="cahoots_list_site">';
                   	// console.log(val.name);
