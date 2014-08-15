@@ -726,7 +726,7 @@ form input[type=search], form textarea {
   form input[type=search], form textarea {
     height: 48px;
     padding: 0 12px;
-    width: 92%;
+    width: 90%;
   }
 }
 form .search-submit {
