@@ -286,12 +286,14 @@ footer {
 			margin: 40px auto 30px auto;
 		}
 	& form {
-		display: inline-table;
+		display: inline-flex;
 		width: auto;
 		text-align: center;
 		margin: 0 auto;
 		@include responsive($small-break) {
 			width: 100%;
+			margin-top: -4px;
+			display: inline-table;
 		}
 	}
 }
