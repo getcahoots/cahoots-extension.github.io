@@ -76,6 +76,7 @@ header nav {
 
 .content {
 	padding-top: 60px;
+	display: -webkit-box;
 	display: flex;
 	height: auto !important;
 	&.video {
