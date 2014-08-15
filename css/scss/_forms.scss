@@ -15,10 +15,57 @@ form{
 		border:1px solid #ccc;
 		outline:none;
 		&:focus{
-			border-color:$prime;
+			border-color:rgba(60,60,70,0.6);
 		}
 		&.auto{
 			width:auto;
+		}
+	}
+
+	input[type=search], textarea {
+		-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+		-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+		box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
+		@include border-radius(4px);
+		padding: 0 20px;
+		border: 1px solid rgba(60,60,70,0.3);
+		outline: none;
+		height: 54px;
+		width: 600px;
+		-webkit-appearance: none;
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0);
+		-webkit-transition: 0s ease-in-out;
+		-moz-transition: 0s ease-in-out;
+		-o-transition: 0s ease-in-out;
+		transition: 0.4s ease-in-out;
+		@include responsive($small-break) {
+			width: 100%;
+			height: 48px;
+			padding: 0 12px;
+		}
+	}
+
+	.search-submit {
+		background: #414141 url("../images/search-icon.svg") center center no-repeat;
+		background-size: 100% 100%;
+		width: 56px;
+		height: 56px;
+		vertical-align: middle;
+		outline: 0;
+		border: 0;
+		position: relative;
+		margin-left: -56px;
+		-webkit-border-radius: 0 4px 4px 0;
+		-moz-border-radius: 0 4px 4px 0;
+		-ms-border-radius: 0 4px 4px 0;
+		-o-border-radius: 0 4px 4px 0;
+		border-radius: 0 4px 4px 0;
+		@include responsive($small-break) {
+			width: 50px;
+			height: 50px;
+			margin-left: -50px;
 		}
 	}
 

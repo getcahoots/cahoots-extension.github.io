@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<!--[if lt IE 9]> <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=0.3, user-scalable=1">  
+</head>
+<body>
+
+<script>
+	$(document).ready(function(){
+        $('#search').keyup(function(){
+            var searchField = $('#search').val();
+            var regex = new RegExp(searchField, "i");
+            var count = 1;
+            var output = '';
+            $.getJSON('db.json', function(data) {
+              $.each(data, function(key, val){
+                if ((val.name.search(regex) != -1) || ($("input:empty").length == 0)) {
+                  	output += '<h1>Für <strong>' + val.name + '</strong> liegen folgende Verbindungen vor:</h1>';
+                  	output += '<article class="cahoots_middle_site"><ul id="cahoots_list_site">';
+                  	// console.log(val.name);
+                  	val.cahoots.forEach(function(cahoot) { 
+                  		console.log(cahoot.name); 
+                  		output += '<li class="cahoots_item_site"><a href="' + cahoot.more_info + '" target="_blank" "title="Mehr Infos zu dieser Organisation">' + cahoot.name + '</a><a target="_blank" class="quelle_site" href="' + cahoot.src +'">Quelle</a></li>';
+                  	});
+                  	output += '</ul></article>';
+                  if(count%2 == 0){
+                    // output += '</div><div class="row">'
+                  }
+                  count++;
+                }
+              });
+              // output += '</div>';
+              $('.results').html(output);
+            }); 
+        });
+      });
+</script>
+
+<a href="index.html"><header class="logo"></header></a>
+
+<div class="main">
+	<section class="search">
+		<form >
+		    <input type="search" class="form-control input-lg" id="search" placeholder="Nach Journalisten suchen…" autofocus>
+			<!-- <input type="submit" class="search-submit" value=""> -->
+		</form>
+	</section>
+	<h1 class="results" id="del">
+		Cahoots zeigt dir Verbindungen von Journalisten zu Vereinen, Organisationen und Unternehmen. Dadurch kannst du schnell einschätzen, ob ein Artikel interessengeleitet sein könnte.
+	</h1>
+	<section class="results">
+		<!-- <h1>Für <strong>Hans Meier</strong> liegen folgende Verbindungen vor:</h1>
+		<article class="cahoots_middle_site">
+			<ul id="cahoots_list_site">
+				<li class="cahoots_item_site">
+					<a href="#" target="_blank" title="Mehr Infos zu dieser Organisation">Transatlantisches Superbündnis gaaanz laaaaang</a>
+					<a target="_blank" class="quelle_site" href="#">Quelle</a>
+				</li>
+				<li class="cahoots_item_site">
+					<a href="#" target="_blank" title="Mehr Infos zu dieser Organisation">Eine Beispielverbindung</a>
+					<a target="_blank" class="quelle_site" href="#">Quelle</a>
+				</li>
+				<li class="cahoots_item_site">
+					<a href="#" target="_blank" title="Mehr Infos zu dieser Organisation">Mehr davon</a>
+					<a target="_blank" class="quelle_site" href="#">Quelle</a>
+				</li>
+			</ul>
+		</article> -->
+	</section>
+</div>
+<footer class="integrate">
+	<span>
+		<a href="http://cahoots-extension.github.io">Browser-Extension</a></span><span><a href="https://medium.com/@h_x_m_">HXM</a>
+	</span>
+</footer>
+
+</body>
+</html>
