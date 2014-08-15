@@ -12,10 +12,9 @@ form{
 		@include box-shadow(inset 0 1px 2px rgba(0,0,0,.05));
 		width:100%;
 		padding:5px;
-		border:1px solid #ccc;
 		outline:none;
 		&:focus{
-			border-color:rgba(60,60,70,0.6);
+			border-color:rgba(60,60,70,0.5);
 		}
 		&.auto{
 			width:auto;
@@ -28,7 +27,7 @@ form{
 		box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0);
 		@include border-radius(4px);
 		padding: 0 20px;
-		border: 1px solid rgba(60,60,70,0.3);
+		border: 1px solid rgba(60,60,70,0.25);
 		outline: none;
 		height: 54px;
 		width: 440px;
