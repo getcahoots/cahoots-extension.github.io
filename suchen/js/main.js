@@ -1,10 +1,9 @@
 $(document).ready(function(){
 	if (localStorage.getItem("searchValue")) {
-		console.log('YO');
 		var storedValue = localStorage.getItem("searchValue");
 		$('#search').val(storedValue);
+		$('#search').keyup();
 		localStorage.setItem("searchValue", '');
-		$('#search').keypress();
 	}
 
 	$('#search').keyup(function() {
