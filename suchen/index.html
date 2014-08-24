@@ -49,6 +49,30 @@
               $('.results').html(output);
             }); 
         });
+		$('#submit').submit(function(){
+            var searchField = $('#search').val();
+            var regex = new RegExp(searchField, "i");
+            var count = 1;
+            var output = '';
+            $.getJSON('db.json', function(data) {
+              $.each(data, function(key, val){
+                if ((val.name.search(regex) != -1)) {
+                  	output += '<h1>Für <strong>' + val.name + '</strong> liegen folgende Verbindungen vor:</h1>';
+                  	output += '<article class="cahoots_middle_site"><ul id="cahoots_list_site">';
+                  	val.cahoots.forEach(function(cahoot) { 
+                  		output += '<li class="cahoots_item_site"><a href="' + cahoot.more_info + '" target="_blank" "title="Mehr Infos zu dieser Organisation">' + cahoot.name + '</a><a target="_blank" class="quelle_site" href="' + cahoot.src +'">Quelle</a></li>';
+                  	});
+                  	output += '</ul></article>';
+                  if(count%2 == 0){
+                    // output += '</div><div class="row">'
+                  }
+                  count++;
+                }
+              });
+              // output += '</div>';
+              $('.results').html(output);
+            }); 
+        });
       });
 </script>
 
@@ -58,7 +82,7 @@
 	<section class="search">
 		<form>
 		    <input type="search" class="form-control input-lg" id="search" placeholder="Nach Journalisten suchen…" autofocus>
-			<input type="submit" class="search-submit" value="">
+			<input type="submit" class="search-submit" id="submit" value="">
 		</form>
 	</section>
 	<h1 class="results" id="del">
