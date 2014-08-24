@@ -17,12 +17,10 @@ $(document).ready(function(){
                   	});
                   	output += '</ul></article>';
 					if(count%2 == 0){
-                    	// output += '</div><div class="row">'
  					}
                 	count++;
 					}
               	});
-              // output += '</div>';
 			$('.results').html(output);
 		}); 
 		if ($(window).width() > 1270) {
