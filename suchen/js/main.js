@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	if (localStorage.getItem("searchValue") == 'Jochen') {
+	if (localStorage.getItem("searchValue")) {
 		var storedValue = localStorage.getItem("searchValue");
 		$('#search').val(storedValue);
 		localStorage.setItem("searchValue", '');
