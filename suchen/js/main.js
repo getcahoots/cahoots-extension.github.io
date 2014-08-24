@@ -1,8 +1,7 @@
 $(document).ready(function(){
-	var storedValue = sessionStorage.getItem("searchValue");
-	console.log(sessionStorage.getItem("searchValue"));
+	var storedValue = localStorage.getItem("searchValue");
 	$('#search').val(storedValue);
-	sessionStorage.setItem("searchValue", '');
+	localStorage.setItem("searchValue", '');
 
 	$('#search').keyup(function() {
 		if ($(window).width() > 1270) {

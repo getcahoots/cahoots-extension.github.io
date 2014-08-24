@@ -32,9 +32,7 @@
                 if ((val.name.search(regex) != -1)) {
                   	output += '<h1>Für <strong>' + val.name + '</strong> liegen folgende Verbindungen vor:</h1>';
                   	output += '<article class="cahoots_middle_site"><ul id="cahoots_list_site">';
-                  	// console.log(val.name);
                   	val.cahoots.forEach(function(cahoot) { 
-                  		console.log(cahoot.name); 
                   		output += '<li class="cahoots_item_site"><a href="' + cahoot.more_info + '" target="_blank" "title="Mehr Infos zu dieser Organisation">' + cahoot.name + '</a><a target="_blank" class="quelle_site" href="' + cahoot.src +'">Quelle</a></li>';
                   	});
                   	output += '</ul></article>';
