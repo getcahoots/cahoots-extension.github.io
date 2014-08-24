@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	if (localStorage.getItem("searchValue")) {
+		console.log('YO');
 		var storedValue = localStorage.getItem("searchValue");
 		$('#search').val(storedValue);
 		localStorage.setItem("searchValue", '');
