@@ -1,21 +1,3 @@
-// $(function(){
-//  var shrinkHeader = 100;
-//   $(window).scroll(function() {
-//     var scroll = getCurrentScroll();
-//       if ( scroll >= shrinkHeader ) {
-//            $('header').addClass('shrink');
-//            $('header').css({opacity: '0', transition: 'all 0.5s ease-in-out',});
-//         }
-//         else {
-//             $('header').removeClass('shrink');
-//             $('.fit').removeClass('shrink');
-//         }
-//   });
-// function getCurrentScroll() {
-//     return window.pageYOffset || document.documentElement.scrollTop;
-//     }
-// });
-
 $(function(){
         // Check the initial Poistion of the Sticky Header
         var stickyHeaderTop = $('header').offset().top;
