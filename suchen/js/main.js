@@ -1,7 +1,10 @@
 $(document).ready(function(){
-	var storedValue = localStorage.getItem("searchValue");
-	$('#search').val(storedValue);
-	localStorage.setItem("searchValue", '');
+	if (localStorage.getItem("searchValue") =! '') {
+		var storedValue = localStorage.getItem("searchValue");
+		$('#search').val(storedValue);
+		localStorage.setItem("searchValue", '');
+		$('#search').keypress();
+	}
 
 	$('#search').keyup(function() {
 		if ($(window).width() > 1270) {
