@@ -21,8 +21,13 @@ header .shrink {
 	height: 80px;
 }
 header .fit {
-	display: flex;
-    align-items: center;
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	align-items: center;
+    -webkit-box-align: center;
 }
 header .fit .shrink {
     align-items: baseline;
@@ -33,6 +38,8 @@ header .fit .shrink {
 	width: 115px;
 	height: 44px;
 	margin: 0;
+	-webkit-align-self: center; 
+	align-self: center;
 }
 header nav {
 	position: relative;
@@ -40,6 +47,8 @@ header nav {
 	width: 844px;
 	height: auto;
 	text-transform: uppercase;
+	-webkit-align-self: center; 
+	align-self: center;
 	& ul{
 		float: right;
 		& li {
@@ -294,6 +303,17 @@ footer {
 			width: 100%;
 			display: inline-table;
 		}
+	}
+}
+
+iframe {
+	@include responsive($big-break) {
+		max-width: 100%;
+		max-height: 500px;
+	}
+	@include responsive($small-break) {
+		max-width: 100%;
+		max-height: 300px;
 	}
 }
 
