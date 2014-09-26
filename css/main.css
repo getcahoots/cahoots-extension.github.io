@@ -498,9 +498,9 @@ h2 {
 }
 
 h3 {
-  font-size: 26px;
-  margin: 0 0 25px;
-  font-weight: 400;
+  font-size: 1em;
+  margin: 0;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -694,7 +694,7 @@ form input[type=text], form input[type=email], form input[type=phone], form inpu
   outline: none;
 }
 form input[type=text]:focus, form input[type=email]:focus, form input[type=phone]:focus, form input[type=password]:focus, form input[type=number]:focus, form input[type=search]:focus, form textarea:focus {
-  border-color: rgba(60, 60, 70, 0.52);
+  border-color: rgba(60, 60, 70, 0.5);
 }
 form input[type=text].auto, form input[type=email].auto, form input[type=phone].auto, form input[type=password].auto, form input[type=number].auto, form input[type=search].auto, form textarea.auto {
   width: auto;
@@ -3114,6 +3114,21 @@ footer ul li:last-child {
 
 #how {
   line-height: 1.7em;
+}
+
+.small {
+  width: 75%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 780px) {
+  .small {
+    width: 100%;
+  }
+}
+.small span {
+  margin: 0;
+  display: block;
+  color: #a0a0aa;
 }
 
 @media screen and (max-width: 480px) {

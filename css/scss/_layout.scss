@@ -321,6 +321,19 @@ iframe {
 	line-height: 1.7em;
 }
 
+.small {
+	width: 75%;
+	margin: 0 auto;
+	@include responsive($big-break) {
+		width: 100%;
+	}
+	& span {
+		margin: 0;
+		display: block;
+		color: $sec-light;
+	}
+}
+
 // Mobile first styles if needed
 // @include mobilefirst($big-break) {
 // }
