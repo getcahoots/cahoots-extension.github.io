@@ -1,0 +1,341 @@
+// HEADER //
+
+header {
+	background: $prime;
+	width: 100%;
+	height: 80px;
+	font-size: 0.9em;
+	z-index: 100;
+	position: fixed;
+	transition: all .5s ease-in-out;
+	border-bottom: 1px solid $prime-dark;
+}
+header .shrink {
+    height: 40px;
+    line-height:80px;
+
+}
+.fit {
+	width: 960px;
+	margin: 0 auto;
+	height: 80px;
+}
+header .fit {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+	align-items: center;
+    -webkit-box-align: center;
+}
+header .fit .shrink {
+    align-items: baseline;
+}
+.logo {
+	background: url('../images/logo.png') center center no-repeat;
+	background-size: 115px 44px;
+	width: 115px;
+	height: 44px;
+	margin: 0;
+	-webkit-align-self: center; 
+	align-self: center;
+}
+header nav {
+	position: relative;
+	right: 0;
+	width: 844px;
+	height: auto;
+	text-transform: uppercase;
+	-webkit-align-self: center; 
+	align-self: center;
+	& ul{
+		float: right;
+		& li {
+			list-style: none;
+			display: inline;
+			& a {
+				margin: 0 0 0 20px;
+				padding: 10px 12px;
+				border-radius: 3px;
+			}
+		}
+	}
+}
+
+// TEASER
+
+.teaser {
+	clear: both;
+	width: 100%;
+	height: 570px;
+	background-image: url('../images/DSCF0014-k3.jpg');
+	background-size: cover;
+	background-position: 70% 56%;
+	padding-top: 20px;
+}
+.teaser .fit {
+	padding: 135px 0 0 0;
+}
+.teaser .fit p{
+	width: 310px;
+}
+
+// CONTENT
+
+.content {
+	padding-top: 60px;
+	display: -webkit-box;
+	display: flex;
+	height: auto !important;
+	&.video {
+		display: block;
+	}
+}
+.article {
+	width: 469px;
+	height: auto;
+	margin: 0 20px 0 0;
+}
+
+// VIDEO
+
+video {
+  width: 100% !important;
+  height: 539px; 
+  // border: 1px solid $prime-dark;
+  box-shadow: 0 -7px 40px rgba(0,0,0,0.05);
+  margin: 10px 0;
+}
+
+#colorize {
+	padding: 10px 0 40px 0;
+	margin: 50px 0;
+	background: #f2f2f4; /* Old browsers */
+	background: -moz-linear-gradient(top, #f2f2f4 0%, #e6e6e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f4), color-stop(100%,#e6e6e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #f2f2f4 0%,#e6e6e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #f2f2f4 0%,#e6e6e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #f2f2f4 0%,#e6e6e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #f2f2f4 0%,#e6e6e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f4', endColorstr='#e6e6e8',GradientType=0 ); /* IE6-9 */
+}
+
+#contribute {
+	max-width: 600px;
+}
+
+// FOOTER
+
+footer {
+	text-align: center;
+	width:350px;
+	height: auto;
+	display: flex;
+    align-items: center;
+    padding-top: 50px !important;
+    & .content {
+    	padding-top: 50px !important;
+    }
+    & ul{
+    	display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+		& li {
+			list-style: none;
+			display: inline;
+			margin: 0px 25px 0 0;
+			font-size: 1.4em;
+			font-weight: 300;
+			&:nth-child(2) {
+				margin: 10px 25px 0 0;
+			}
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+@include responsive($big-break) {
+	header {
+		height: 280px;
+		position: static;
+	}
+	.fit {
+		width: 92%;
+		margin: 0 auto;
+		height: auto;
+	}
+	.teaser {
+		width: 100% !important;
+	}
+	header .fit {
+		display: inline-block;
+	    width: 100%;
+	}
+	.logo {
+		background: url('../images/logo.png') center center no-repeat;
+		background-size: 115px 44px;
+		width: 115px;
+		height: 44px;
+		margin: 40px auto 20px;
+	}
+	header nav {
+		position: relative;
+		height: auto;
+		text-transform: uppercase;
+		width: 100%;
+	}
+	header nav ul {
+		float: none;
+		width: 200px;
+		text-align: center;
+		margin: 20px auto;
+		padding: 0;
+		& li {
+			list-style: none;
+			display: block;
+			margin: 10px auto;
+			padding: 8px 12px;
+			border-radius: 3px;
+		}
+	}
+	// TEASER
+
+	.teaser {
+		clear: both;
+		width: 100%;
+		height: 390px;
+		background-image: url('../images/DSCF0014-k.jpg');
+		background-size: cover;
+		background-attachment: scroll;
+		background-position: 50% 82%;
+	}
+	.teaser .fit {
+		padding: 20px 0 0 0;
+	}
+	.teaser .fit p{
+		width: 270px;
+	}
+	.article {
+		width: 469px;
+		margin: 40px 20px 0 0;
+	}
+
+	// VIDEO
+
+	video {
+	  width: 100% !important;
+	  height: auto !important;
+	  // border: 1px solid $prime-dark;
+	  // box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+	  margin: 10px 0;
+	}
+}
+
+@include responsive($small-break) {
+	.video h2 {
+		margin: 0;
+	}
+	.article {
+		width: 100%;
+		margin: 40px 20px 0 0;
+	}
+	.content {
+		display: block;
+		padding: 0px 0;
+	}
+	.teaser {
+		clear: both;
+		width: 100%;
+		height: 470px;
+		background-size: cover;
+		background-position: 22% 52%;
+		padding-top: 0px;
+	}
+	.teaser .fit p{
+		width: 240px;
+	}
+	#colorize {
+		padding: 30px 0 20px 0;
+		margin: 50px 0;
+		background: $prime;
+	}
+	header nav ul li a {
+		margin: 0;
+	}
+	footer {
+    	padding-top: 50px !important;
+    & ul{
+		& li {
+			margin: 0px 15px 0 0;
+			font-size: 1.3em;
+			font-weight: 300;
+			&:nth-child(2) {
+				margin: 10px 15px 0 0;
+			}
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+}
+
+.search {
+	font-size: 1em;
+	font-weight: 300;
+	text-align: center;
+	height: 60px;
+	margin: 25px auto 15px auto;
+	@include responsive($small-break) {
+			margin: 40px auto 30px auto;
+		}
+	& form {
+		display: inline-flex;
+		width: auto;
+		text-align: center;
+		margin: 0 auto;
+		@include responsive($small-break) {
+			width: 100%;
+			display: inline-table;
+		}
+	}
+}
+
+iframe {
+	@include responsive($big-break) {
+		max-width: 100%;
+		max-height: 500px;
+	}
+	@include responsive($small-break) {
+		max-width: 100%;
+		max-height: 300px;
+	}
+}
+
+#how {
+	line-height: 1.7em;
+}
+
+.small {
+	width: 75%;
+	margin: 0 auto;
+	@include responsive($big-break) {
+		width: 100%;
+	}
+	& span {
+		margin: 0;
+		display: block;
+		color: $sec-light;
+	}
+}
+
+// Mobile first styles if needed
+// @include mobilefirst($big-break) {
+// }
+// @include mobilefirst($small-break) {
+// }
